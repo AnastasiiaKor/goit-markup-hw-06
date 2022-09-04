@@ -230,7 +230,9 @@ ul {
   transition: background-color 250ms var(--transition-timing-function);
 }
 .hero-button:hover,
-.hero-button:focus {
+.hero-button:focus,
+.submit-btn:hover,
+.submit-btn:focus {
   background-color: #188ce8;
 }
 .button {
@@ -255,8 +257,9 @@ ul {
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--transition-timing-function) 100ms;
 
-  min-width: 528px;
-  min-height: 581px;
+  padding: 40px;
+  width: 528px;
+  height: 581px;
   background-color: var(--main-background-color);
 }
 .backdrop.is-hidden {
@@ -293,8 +296,85 @@ ul {
   transition: fill 250ms var(--transition-timing-function);
 }
 
+.modal-title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+}
+
+.form-input,
+.form-textarea,
+.form-label {
+  display: block;
+}
+.form-label {
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+.form-input {
+  margin-bottom: 10px;
+  padding-left: 42px;
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  height: 44px;
+}
+.form-textarea {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+}
+.form-textarea::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.submit-btn {
+  padding: 10px 52px;
+  background-color: var(--accent-color);
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--main-background-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  transition: background-color 250ms var(--transition-timing-function);
+}
+.terms {
+  color: var(--accent-color);
+}
+.agreement-label {
+  display: inline-block;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+.submit-wrapper {
+  display: flex;
+  justify-content: center;
+}
 .button,
-.hero-button {
+.hero-button,
+.submit-btn {
   cursor: pointer;
 }
 
