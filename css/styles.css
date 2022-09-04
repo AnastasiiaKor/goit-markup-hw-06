@@ -325,6 +325,23 @@ ul {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   height: 44px;
+  transition: border 250ms var(--transition-timing-function);
+}
+.form-field {
+  position: relative;
+}
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: fill 250ms var(--transition-timing-function);
+}
+.form-input:focus {
+  border: 1px solid var(--accent-color);
+}
+.form-input:focus + .icon {
+  fill: var(--accent-color);
 }
 .form-textarea {
   width: 100%;
@@ -341,8 +358,11 @@ ul {
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+  transition: border 250ms var(--transition-timing-function);
 }
-
+.form-textarea:focus {
+  border: 1px solid var(--accent-color);
+}
 .submit-btn {
   padding: 10px 52px;
   background-color: var(--accent-color);
@@ -360,14 +380,36 @@ ul {
 .terms {
   color: var(--accent-color);
 }
+.agreement-wrapper {
+  position: relative;
+  padding-left: 37px;
+}
 .agreement-label {
-  display: inline-block;
+  display: block;
   margin-bottom: 30px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+.icon-vector,
+.icon-check {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 250ms var(--transition-timing-function);
+}
+.icon-check {
+  opacity: 0;
+}
+.checkbox-input:checked + .icon-check {
+  opacity: 1;
+}
+.checkbox-input:checked ~ .icon-vector {
+  opacity: 0;
+}
+
 .submit-wrapper {
   display: flex;
   justify-content: center;

@@ -527,14 +527,35 @@
         <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
         <form name="modal-form" class="modal-form">
           <label name="name" class="form-label"
-            >Ім'я<input type="text" name="name" class="form-input" />
+            >Ім'я
+            <div class="form-field">
+              <input type="text" name="name" class="form-input" />
+              <svg class="icon" width="18" height="18">
+                <use
+                  href="./images/icons.svg/symbol-defs.svg#icon-person"
+                ></use>
+              </svg>
+            </div>
           </label>
           <label name="phone" class="form-label"
-            >Телефон<input type="tel" name="phone" class="form-input"
-          /></label>
-          <label name="email" class="form-label"
-            >Пошта<input type="email" name="email" class="form-input" />
+            >Телефон
+            <div class="form-field">
+              <input type="tel" name="phone" class="form-input" />
+              <svg class="icon" width="18" height="18">
+                <use
+                  href="./images/icons.svg/symbol-defs.svg#icon-telephone"
+                ></use>
+              </svg>
+            </div>
           </label>
+          <label name="email" class="form-label"
+            >Пошта
+            <div class="form-field">
+              <input type="email" name="email" class="form-input" />
+              <svg class="icon" width="18" height="18">
+                <use href="./images/icons.svg/symbol-defs.svg#icon-email"></use>
+              </svg></div
+          ></label>
           <label name="comment" class="form-label"
             >Коментар<textarea
               type="text"
@@ -542,14 +563,26 @@
               placeholder="Введіть текст"
             ></textarea>
           </label>
-          <label name="agreement" class="agreement-label"
-            ><input
-              type="checkbox"
-              name="agree"
-              class="checkbox-input"
-            />Погоджуюся з розсилкою та приймаю
-            <a href="" class="terms">Умови договору</a></label
-          >
+          <div class="agreement-wrapper">
+            <label name="agreement" class="agreement-label"
+              ><input
+                type="checkbox"
+                name="agree"
+                class="checkbox-input visually-hidden"
+              /><svg class="icon-check" width="16" height="15">
+                <use href="./images/icons.svg/symbol-defs.svg#icon-check"></use>
+              </svg>
+              <svg class="icon-vector" width="16" height="15">
+                <use
+                  href="./images/icons.svg/symbol-defs.svg#icon-vector"
+                ></use>
+              </svg>
+
+              Погоджуюся з розсилкою та приймаю
+              <a href="" class="terms">Умови договору</a>
+            </label>
+          </div>
+
           <div class="submit-wrapper">
             <button type="submit" class="submit-btn">Відправити</button>
           </div>
