@@ -372,6 +372,9 @@ ul {
   border: 1px solid var(--accent-color);
 }
 .submit-btn {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
   padding: 10px 52px;
   background-color: var(--accent-color);
   border: none;
@@ -418,11 +421,6 @@ ul {
   opacity: 0;
 }
 
-.submit-btn {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-}
 .button,
 .hero-button,
 .submit-btn,
