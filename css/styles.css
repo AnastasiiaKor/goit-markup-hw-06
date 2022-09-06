@@ -259,7 +259,6 @@ ul {
 
   padding: 40px;
   width: 528px;
-  height: 581px;
   background-color: var(--main-background-color);
 }
 .backdrop.is-hidden {
@@ -312,14 +311,13 @@ ul {
   display: block;
 }
 .form-label {
-  margin-bottom: 4px;
+  margin-bottom: 10px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
 .form-input {
-  margin-bottom: 10px;
   padding-left: 42px;
   width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -330,6 +328,7 @@ ul {
 }
 .form-field {
   position: relative;
+  margin-top: 4px;
 }
 .icon {
   position: absolute;
@@ -341,6 +340,7 @@ ul {
 .form-input:focus,
 .form-input:hover {
   border: 1px solid var(--accent-color);
+  outline: none;
 }
 .form-input:focus + .icon,
 .form-input:hover + .icon {
@@ -352,6 +352,7 @@ ul {
   height: 120px;
   padding: 12px 16px;
   margin-bottom: 20px;
+  margin-top: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
@@ -366,6 +367,7 @@ ul {
 }
 .form-textarea:focus {
   border: 1px solid var(--accent-color);
+  outline: none;
 }
 
 .form-textarea:hover {
@@ -391,6 +393,10 @@ ul {
 .terms {
   color: var(--accent-color);
 }
+.terms:hover,
+.terms:focus {
+  text-decoration: none;
+}
 .agreement-wrapper {
   position: relative;
   padding-left: 37px;
@@ -409,16 +415,21 @@ ul {
   left: 14px;
   top: 50%;
   transform: translateY(-50%);
-  transition: opacity 250ms var(--transition-timing-function);
+  transition: opacity 250ms var(--transition-timing-function),
+    fill 250ms var(--transition-timing-function);
 }
 .icon-check {
   opacity: 0;
 }
+
 .checkbox-input:checked + .icon-check {
   opacity: 1;
 }
 .checkbox-input:checked ~ .icon-vector {
   opacity: 0;
+}
+.checkbox-input:focus ~ .icon-vector {
+  fill: var(--accent-color);
 }
 
 .button,
@@ -824,7 +835,7 @@ ul {
   fill: var(--main-background-color);
 }
 .follow-us {
-  margin-left: 93px;
+  margin-left: auto;
 }
 .follow-us-form {
   display: flex;
@@ -861,7 +872,7 @@ ul {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: none;
   cursor: pointer;
-  transition: bachground-color 250ms var(--transition-timing-function);
+  transition: background-color 250ms var(--transition-timing-function);
 }
 .follow-us .send-btn:focus,
 .follow-us .send-btn:hover {
